@@ -1,6 +1,8 @@
-namespace BookStoreApi.Models;
+using BookStoreApi.Attributes;
 
-public class Car: INotAuditableEntity
+namespace BookStoreApi.Models;
+[Sensitive]
+public class Car: IAuditableEntity
 {
     public Guid ID { get; set; } = Guid.NewGuid();
     public string Make { get; set; } = string.Empty;
